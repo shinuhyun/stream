@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Noom
+        link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    body 
+        header 
+            h1 Noom
+        main
+            #welcome
+                form
+                    input(placeholder="room name", requierd, type="text")
+                    button Enter Room
+            #call 
+                #myStream 
+                    video#myFace(autoplay, playsinline, width="400", height="400")
+                    select#cameras
+                    video#peerFace(autoplay, playsinline, width="400", height="400")
+        script(src="/socket.io/socket.io.js")
+        script(src="/public/js/rtc_app.js")
